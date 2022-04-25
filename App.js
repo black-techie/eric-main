@@ -20,6 +20,7 @@ export default function App() {
         />
         <Stack.Screen name="login" component={Login} />
         <Stack.Screen name="register" component={SignUp} />
+        {/* <Stack.Screen name="home" component={MyTabs} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
