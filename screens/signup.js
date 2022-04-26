@@ -10,13 +10,22 @@ export default function SignUp() {
         <TextInput placeholder="Name" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} />
         <TextInput placeholder="Email" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} />
         <TextInput placeholder="Username" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} />
+        <TextInput placeholder="Phone Number" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} />
+
         <TextInput placeholder="Password" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} secureTextEntry={true} />
         <TextInput placeholder=" Confirm Password" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} secureTextEntry={true} />
 
-        <Button buttonStyle={styles.loginButton}  title="Submit" />
-        <TouchableOpacity>
-        <Text style={styles.navButtonText}>Already have an account? Sign In</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.buttonOutline}
+        >
+          <Text style={styles.buttonTextOutline}>Sign Up</Text>
+        </TouchableOpacity>
+
+        <Text>Already have an account?</Text><TouchableOpacity
+        style={styles.navButton}
+        onPress={() => navigation.navigate('login')}>
+          <Text style={styles.navButtonText}>Sign In</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -61,9 +70,27 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   navButtonText: {
-    marginTop: 20,
+    marginTop: 5,
     fontSize: 18,
     fontWeight: '500',
     color: '#2e64e5',
+  },
+  buttonOutline: {
+    marginTop: 50,
+    height: 50,
+    width: "50%",
+    alignSelf: "center",
+    backgroundColor: "#EA5C2B",
+    margin: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "#EA5C2B",
+  },
+  buttonTextOutline: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 20,
   },
 });
