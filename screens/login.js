@@ -12,6 +12,7 @@ export default function Login( {navigation} ) {
         <TextInput placeholder="Password" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} secureTextEntry={true} />
         <TouchableOpacity
           style={styles.buttonOutline}
+          onPress={() => navigation.navigate('home')}
         >
           <Text style={styles.buttonTextOutline}>Login</Text>
         </TouchableOpacity>
