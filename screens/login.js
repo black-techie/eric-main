@@ -10,13 +10,16 @@ export default function Login( {navigation} ) {
         <TextInput placeholder="Username" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} />
 
         <TextInput placeholder="Password" placeholderColor="#c4c3cb" style={styles.loginFormTextInput} secureTextEntry={true} />
+        <TouchableOpacity
+          style={styles.buttonOutline}
+        >
+          <Text style={styles.buttonTextOutline}>Login</Text>
+        </TouchableOpacity>
 
-        <Button title="Login" buttonStyle={styles.loginButton} onPress={() => navigation.navigate('SignUp')}  />
-
-      <TouchableOpacity
+        <Text>Don't Have an account?</Text><TouchableOpacity
         style={styles.navButton}
-        onPress={() => navigation.navigate('SignUp')}>
-        <Text style={styles.navButtonText}> <Text>Don't Have an account? Sign Up</Text></Text>
+        onPress={() => navigation.navigate('register')}>
+          <Text style={styles.navButtonText}>Sign Up</Text>
       </TouchableOpacity>
       </View>
     );
@@ -55,11 +58,31 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     marginTop: 5,
     marginBottom: 5,
+    width: 300,
   },
   navButtonText: {
     fontSize: 18,
     fontWeight: '500',
     color: '#2e64e5',
     // fontFamily: 'Lato-Regular',
+  },
+  buttonOutline: {
+    marginTop: 30,
+    marginBottom: 30,
+    height: 50,
+    width: "50%",
+    alignSelf: "center",
+    backgroundColor: "#EA5C2B",
+    margin: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "#EA5C2B",
+  },
+  buttonTextOutline: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 20,
   },
 });
