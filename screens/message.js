@@ -17,12 +17,14 @@ import {
             {/* main content will go here */}
           </View>
           <View style={styles.nav}>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('home')}
+            >
               <Icon
                 style={{}}
-                size={30}
+                size={28}
                 name="home"
-                type="foundation"
+                type="feather"
                 color={"black"}
               />
             </TouchableOpacity>
@@ -31,7 +33,7 @@ import {
             >
               <Icon
                 style={{}}
-                size={30}
+                size={28}
                 name="clock"
                 type="feather"
                 color={"black"}
@@ -42,10 +44,10 @@ import {
             >
               <Icon
                 style={{}}
-                size={30}
+                size={32}
                 name="message-circle"
                 type="feather"
-                color={"black"}
+                color={"red"}
               />
             </TouchableOpacity>
             <TouchableOpacity
@@ -53,7 +55,7 @@ import {
             >
               <Icon
                 style={{}}
-                size={30}
+                size={28}
                 name="user"
                 type="feather"
                 color={"black"}

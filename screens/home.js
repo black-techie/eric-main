@@ -20,10 +20,10 @@ export default function Home({navigation}) {
           <TouchableOpacity>
             <Icon
               style={{}}
-              size={30}
+              size={32}
               name="home"
-              type="foundation"
-              color={"black"}
+              type="feather"
+              color={"red"}
             />
           </TouchableOpacity>
           <TouchableOpacity
@@ -31,7 +31,7 @@ export default function Home({navigation}) {
           >
             <Icon
               style={{}}
-              size={30}
+              size={28}
               name="clock"
               type="feather"
               color={"black"}
@@ -42,7 +42,7 @@ export default function Home({navigation}) {
           >
             <Icon
               style={{}}
-              size={30}
+              size={28}
               name="message-circle"
               type="feather"
               color={"black"}
@@ -53,7 +53,7 @@ export default function Home({navigation}) {
           >
             <Icon
               style={{}}
-              size={30}
+              size={28}
               name="user"
               type="feather"
               color={"black"}
