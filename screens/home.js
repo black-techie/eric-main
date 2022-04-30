@@ -7,16 +7,12 @@ import {
 } from "react-native";
 import { Icon } from "react-native-elements";
 
-export default function Home() {
+export default function Home({navigation}) {
   return (
     <SafeAreaView>
       <View style={styles.contaniner}>
         <View style={styles.main}>
           {/* main content will go here */}
-
-
-
-
 
           {/* main content will go here */}
         </View>
@@ -30,25 +26,31 @@ export default function Home() {
               color={"black"}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+             onPress={() => navigation.navigate('history')}
+          >
             <Icon
               style={{}}
               size={30}
-              name="search"
+              name="clock"
               type="feather"
               color={"black"}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+               onPress={() => navigation.navigate('message')}
+          >
             <Icon
               style={{}}
               size={30}
-              name="heart"
+              name="message-circle"
               type="feather"
               color={"black"}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+             onPress={() => navigation.navigate('profile')}
+          >
             <Icon
               style={{}}
               size={30}
